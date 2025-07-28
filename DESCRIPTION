@@ -1,6 +1,6 @@
 Package: ipw
-Version: 1.2.1
-Date: 2023-01-02
+Version: 1.2.1.1
+Date: 2025-07-28
 Title: Estimate Inverse Probability Weights
 Authors@R: c(person(c("Willem", "M."), "van der Wal", role = c("aut", "cre"), email = "willem@vanderwalresearch.com"),
    person(c("Ronald", "B."), "Geskus", role=c("aut"), email = "rgeskus@oucru.org", comment = "maintainer 2011-2022"))
@@ -18,6 +18,6 @@ Description: Functions to estimate the probability to receive the observed treat
 Encoding: UTF-8
 License: GPL (>= 2)
 NeedsCompilation: no
-Packaged: 2023-12-11 08:06:24 UTC; hornik
+Packaged: 2025-07-28 04:50:57 UTC; hornik
 Repository: CRAN
-Date/Publication: 2023-12-11 08:22:39 UTC
+Date/Publication: 2025-07-28 04:57:51 UTC

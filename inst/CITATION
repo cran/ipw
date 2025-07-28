@@ -1,8 +1,8 @@
 citHeader("To cite ipw in publications use:")
 
-citEntry(entry = "Article",
+bibentry("Article",
   title        = "{ipw}: An {R} Package for Inverse Probability Weighting",
-  author       = personList(person(c("Willem", "M."), "van der Wal"),
+  author       = c(person(c("Willem", "M."), "van der Wal"),
                    as.person("Ronald B. Geskus")),
   journal      = "Journal of Statistical Software",
   year         = "2011",
@@ -10,11 +10,5 @@ citEntry(entry = "Article",
   number       = "13",
   pages        = "1--23",
   doi          = "10.18637/jss.v043.i13",
-
-  textVersion  =
-  paste("Willem M. van der Wal, Ronald B. Geskus (2011).",
-        "ipw: An R Package for Inverse Probability Weighting.",
-        "Journal of Statistical Software, 43(13), 1-23.",
-        "DOI 10.18637/jss.v043.i13")
 )
 
