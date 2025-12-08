@@ -1,12 +1,18 @@
 Package: ipw
-Version: 1.2.1.1
-Date: 2025-07-28
+Version: 1.2.2
+Date: 2025-12-05
 Title: Estimate Inverse Probability Weights
-Authors@R: c(person(c("Willem", "M."), "van der Wal", role = c("aut", "cre"), email = "willem@vanderwalresearch.com"),
-   person(c("Ronald", "B."), "Geskus", role=c("aut"), email = "rgeskus@oucru.org", comment = "maintainer 2011-2022"))
-Author: Willem M. van der Wal [aut, cre],
+Authors@R: c(
+    person(c("Hung", "Thai"), "Tran", role = c("aut", "cre"), email = "hungtt@oucru.org"),
+    person(c("Willem", "M."), "van der Wal", role = "aut",
+           email = "willem@vanderwalresearch.com"),
+    person(c("Ronald", "B."), "Geskus", role = "aut",
+           email = "rgeskus@oucru.org",
+           comment = "maintainer 2011-2022"))
+Author: Hung Thai Tran [aut, cre],
+  Willem M. van der Wal [aut],
   Ronald B. Geskus [aut] (maintainer 2011-2022)
-Maintainer: Willem M. van der Wal <willem@vanderwalresearch.com>
+Maintainer: Hung Thai Tran <hungtt@oucru.org>
 Depends: R (>= 3.0.0)
 Imports: MASS, nnet, survival, geepack, graphics, methods, stats
 Suggests: nlme, survey, boot
@@ -18,6 +24,7 @@ Description: Functions to estimate the probability to receive the observed treat
 Encoding: UTF-8
 License: GPL (>= 2)
 NeedsCompilation: no
-Packaged: 2025-07-28 04:50:57 UTC; hornik
+RoxygenNote: 7.3.3
+Packaged: 2025-12-05 12:17:18 UTC; hungtt
 Repository: CRAN
-Date/Publication: 2025-07-28 04:57:51 UTC
+Date/Publication: 2025-12-08 13:30:07 UTC

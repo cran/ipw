@@ -92,11 +92,13 @@ simdat$sw <- temp$ipw.weights
 #Marginal structural model for the causal effect of a on y
 #corrected for confounding by l using inverse probability weighting
 #with robust standard error from the survey package.
-require("survey")
-msm <- (svyglm(y ~ a, design = svydesign(~ 1, weights = ~ sw,
-   data = simdat)))
-coef(msm)
-confint(msm)
+if (requireNamespace("survey", quietly = TRUE)) {
+  simdat$sw <- temp$ipw.weights
+  msm <- survey::svyglm(y ~ a,
+                        design = survey::svydesign(~1, weights = ~sw,
+                        data = simdat))
+  summary(msm)
+}
 
 
 ## Not run: 

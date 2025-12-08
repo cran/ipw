@@ -1,3 +1,46 @@
+#' Estimate Inverse Probability Weights (Point Treatment)
+#'
+#' @description
+#' Computes stabilized or unstabilized inverse probability weights for a
+#' point-treatment exposure model.
+#'
+#' @usage
+#' ipwpoint(exposure, family, link, numerator = NULL, denominator,
+#'          data, trunc = NULL, ...)
+#'
+#' @examples
+#' # Simulate data
+#' n <- 1000
+#' simdat <- data.frame(l = rnorm(n, 10, 5))
+#' a.lin <- simdat$l - 10
+#' pa <- exp(a.lin)/(1 + exp(a.lin))
+#' simdat$a <- rbinom(n, 1, prob = pa)
+#' simdat$y <- 10*simdat$a + 0.5*simdat$l + rnorm(n, -10, 5)
+#'
+#' # Estimate weights
+#' temp <- ipwpoint(
+#'   exposure = a,
+#'   family = "binomial",
+#'   link = "logit",
+#'   numerator = ~ 1,
+#'   denominator = ~ l,
+#'   data = simdat
+#' )
+#'
+#' summary(temp$ipw.weights)
+#'
+#' # Examples requiring the survey package:
+#' if (requireNamespace("survey", quietly = TRUE)) {
+#'   simdat$sw <- temp$ipw.weights
+#'   msm <- survey::svyglm(y ~ a,
+#'                         design = survey::svydesign(~1, weights = ~sw,
+#'                         data = simdat))
+#'   summary(msm)
+#' }
+#'
+#' @export
+
+
 ipwpoint <- function(
 	exposure,
 	family,
